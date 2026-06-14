@@ -1,0 +1,341 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom semantic colors via CSS variables */
+  --color-card: var(--app-card);
+  --color-surface: var(--app-surface);
+
+  /* Primary palette — Sapphire Blue (brand #0F52BA), professional/corporate */
+  --color-primary-50: #eef4fc;
+  --color-primary-100: #d8e6f8;
+  --color-primary-200: #b5cef1;
+  --color-primary-300: #84ace4;
+  --color-primary-400: #4f84d6;
+  --color-primary-500: #2566c8;
+  --color-primary-600: #0F52BA;
+  --color-primary-700: #0d459b;
+  --color-primary-800: #0f397c;
+  --color-primary-900: #102f63;
+  --color-primary-950: #0a1e42;
+
+  /* Sidebar — theme-aware (white in light mode, navy in dark mode) */
+  --color-sidebar: var(--app-sidebar);
+  --color-sidebar-hover: #1e293b;
+  --color-sidebar-active: #0F52BA;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Light mode defaults ──────────────────────────────────────── */
+/* Cards are a subtle cool off-white (not pure #fff) and the page sits on a
+   slightly deeper cool gray, so the UI reads professional rather than stark. */
+:root {
+  --app-card: #fafbfd;
+  --app-surface: #eef2f7;
+  --app-sidebar: #ffffff;
+}
+
+/* ── Landing page scope: always dark, not affected by theme toggle ── */
+.landing-scope,
+.dark .landing-scope {
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+}
+
+/* ── Landing: floating gradient orbs (OpenCare style) ── */
+.landing-orbs {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.landing-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+.landing-orb-1 {
+  top: -15%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(15, 82, 186, 0.2);
+  animation: orbFloat1 8s ease-in-out infinite;
+}
+.landing-orb-2 {
+  bottom: -10%;
+  left: -5%;
+  width: 400px;
+  height: 400px;
+  background: rgba(0, 201, 167, 0.15);
+  animation: orbFloat2 10s ease-in-out infinite;
+}
+.landing-orb-3 {
+  top: 40%;
+  right: 20%;
+  width: 250px;
+  height: 250px;
+  background: rgba(99, 102, 241, 0.12);
+  animation: orbFloat3 12s ease-in-out infinite;
+}
+@keyframes orbFloat1 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-30px, 30px); }
+}
+@keyframes orbFloat2 {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(20px, -20px); }
+}
+@keyframes orbFloat3 {
+  0%, 100% { transform: translate(0, 0); }
+  33% { transform: translate(15px, -25px); }
+  66% { transform: translate(-15px, 10px); }
+}
+
+@keyframes moduleProgress {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+/* ── Dark mode ────────────────────────────────────────────────── */
+.dark {
+  color-scheme: dark;
+  --app-card: #1e293b;
+  --app-surface: #0f172a;
+  --app-sidebar: #0f172a;
+
+  /* Invert slate scale for automatic dark mode support */
+  --color-slate-50: #253349;
+  --color-slate-100: #334155;
+  --color-slate-200: #475569;
+  --color-slate-300: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #94a3b8;
+  --color-slate-600: #cbd5e1;
+  --color-slate-700: #e2e8f0;
+  --color-slate-800: #f1f5f9;
+  --color-slate-900: #f8fafc;
+  --color-slate-950: #f8fafc;
+
+  /* Accent badge backgrounds – semi-transparent on dark */
+  --color-emerald-50: rgba(16, 185, 129, 0.12);
+  --color-emerald-100: rgba(16, 185, 129, 0.18);
+  --color-emerald-500: #34d399;
+  --color-emerald-600: #6ee7b7;
+  --color-emerald-700: #6ee7b7;
+  --color-red-50: rgba(239, 68, 68, 0.12);
+  --color-red-100: rgba(239, 68, 68, 0.18);
+  --color-red-500: #f87171;
+  --color-red-600: #fca5a5;
+  --color-red-700: #fca5a5;
+  --color-blue-50: rgba(59, 130, 246, 0.12);
+  --color-blue-100: rgba(59, 130, 246, 0.18);
+  --color-blue-500: #60a5fa;
+  --color-blue-600: #60a5fa;
+  --color-blue-700: #93c5fd;
+  --color-blue-800: #93c5fd;
+  --color-amber-50: rgba(245, 158, 11, 0.12);
+  --color-amber-100: rgba(245, 158, 11, 0.18);
+  --color-amber-500: #fbbf24;
+  --color-amber-600: #fcd34d;
+  --color-amber-700: #fcd34d;
+  --color-orange-50: rgba(249, 115, 22, 0.12);
+  --color-orange-100: rgba(249, 115, 22, 0.18);
+  --color-orange-500: #fb923c;
+  --color-orange-700: #fdba74;
+  --color-violet-50: rgba(139, 92, 246, 0.12);
+  --color-violet-100: rgba(139, 92, 246, 0.18);
+  --color-violet-600: #a78bfa;
+  --color-cyan-50: rgba(6, 182, 212, 0.12);
+  --color-teal-50: rgba(20, 184, 166, 0.12);
+
+  /* Teal adjustments */
+  --color-teal-100: rgba(20, 184, 166, 0.18);
+  --color-teal-500: #2dd4bf;
+  --color-teal-600: #5eead4;
+  --color-teal-700: #5eead4;
+  --color-teal-800: #99f6e4;
+
+  /* Cyan adjustments */
+  --color-cyan-500: #22d3ee;
+  --color-cyan-600: #67e8f9;
+
+  /* Primary adjustments for dark mode — sapphire-tinted */
+  --color-primary-50: rgba(15, 82, 186, 0.12);
+  --color-primary-100: rgba(15, 82, 186, 0.18);
+  --color-primary-200: rgba(15, 82, 186, 0.24);
+  --color-primary-400: #84ace4;
+  --color-primary-700: #84ace4;
+}
+
+/* ── Base styles ──────────────────────────────────────────────── */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--app-surface);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  /* Theme transition for main containers */
+  .bg-card,
+  .bg-surface,
+  header,
+  aside,
+  main {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+
+  /* ── Dark mode: form elements ────────────────────────────── */
+  .dark input,
+  .dark textarea,
+  .dark select {
+    background-color: var(--app-surface);
+    color: #f8fafc;
+    border-color: #475569;
+  }
+
+  .dark input::placeholder,
+  .dark textarea::placeholder {
+    color: #64748b;
+  }
+
+  .dark input:focus,
+  .dark textarea:focus,
+  .dark select:focus {
+    border-color: #6366f1;
+    background-color: var(--app-surface);
+  }
+
+  /* ── Dark mode: select dropdown arrow ────────────────────── */
+  .dark select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+  }
+
+  /* ── Dark mode: shadows become darker ────────────────────── */
+  .dark .shadow-sm {
+    --tw-shadow-color: rgba(0, 0, 0, 0.25);
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+
+  .dark .shadow-2xl {
+    --tw-shadow-color: rgba(0, 0, 0, 0.5);
+  }
+
+  /* ── Dark mode: checkbox styling ─────────────────────────── */
+  .dark input[type="checkbox"] {
+    background-color: #0f172a;
+    border-color: #475569;
+  }
+
+  .dark input[type="checkbox"]:checked {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #475569;
+  }
+  .dark ::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+  }
+}
+
+@utility animate-fade-in {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-slide-in-right {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+/* ── Explore banner rotation animations ────────────────────── */
+@utility animate-explore-zoom {
+  animation: exploreZoom 0.6s ease-out;
+}
+@keyframes exploreZoom {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@utility animate-explore-fade {
+  animation: exploreFade 0.7s ease-out;
+}
+@keyframes exploreFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@utility animate-explore-slide-up {
+  animation: exploreSlideUp 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes exploreSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-explore-slide-left {
+  animation: exploreSlideLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes exploreSlideLeft {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@utility animate-explore-blur {
+  animation: exploreBlur 0.7s ease-out;
+}
+@keyframes exploreBlur {
+  from { opacity: 0; filter: blur(10px); transform: scale(1.04); }
+  to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
