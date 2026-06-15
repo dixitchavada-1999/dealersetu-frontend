@@ -5,6 +5,7 @@ export { default as IconButton } from './IconButton';
 export { default as PageHeader } from './PageHeader';
 export { default as SearchInput } from './SearchInput';
 export { default as StatusBadge } from './StatusBadge';
+export { default as Toggle } from './Toggle';
 export { default as StarRating } from './StarRating';
 export { default as ImageUploader } from './ImageUploader';
 export { default as ProgressBar } from './ProgressBar';

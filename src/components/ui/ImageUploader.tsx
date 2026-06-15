@@ -1,13 +1,13 @@
 import { useRef, useState } from 'react';
 import { Upload, Link, ImageIcon, Loader2, X } from 'lucide-react';
-import { uploadApi, extractError } from '../../lib/api';
+import { uploadApi, extractError, type UploadModule } from '../../lib/api';
 import toast from '../../lib/toast';
 
 type Props = {
   value: string;
   onChange: (url: string) => void;
   /** Cloudinary folder bucket (e.g. 'categories', 'products'). */
-  folder: string;
+  folder: UploadModule;
   maxSizeMB?: number;
 };
 

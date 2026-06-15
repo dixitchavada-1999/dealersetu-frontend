@@ -1,6 +1,7 @@
 import { Construction, ArrowLeft } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
+/** Placeholder shown when a module is gated as still-in-development. */
 export default function UnderDevelopment({ label }: { label?: string }) {
   const navigate = useNavigate();
   return (

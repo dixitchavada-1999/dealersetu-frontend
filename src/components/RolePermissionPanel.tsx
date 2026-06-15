@@ -123,9 +123,9 @@ export default function RolePermissionPanel({ roleId, isNew = false, showBasicIn
       } else if (roleId) {
         const updated = await rolesApi.update(roleId, { name: name.trim(), description: description.trim(), permissions: perms });
         const shown = new Set(Object.keys(catalog));
-        const shownPerms = updated.permissions.filter((p) => shown.has(moduleOf(p)));
+        const shownPerms = updated.permissions.filter((p: string) => shown.has(moduleOf(p)));
         setRole(updated); setName(updated.name); setDescription(updated.description || '');
-        setSelected(new Set(shownPerms)); setHiddenPerms(updated.permissions.filter((p) => !shown.has(moduleOf(p)))); setBaseline(shownPerms);
+        setSelected(new Set(shownPerms)); setHiddenPerms(updated.permissions.filter((p: string) => !shown.has(moduleOf(p)))); setBaseline(shownPerms);
         toast.success('Permissions updated');
         onSaved?.(updated);
       }

@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import { useModules } from '../contexts/ModulesContext';
 import { useAuth } from '../contexts/AuthContext';
-import UnderDevelopment from '../pages/UnderDevelopment';
+import UnderDevelopment from './UnderDevelopment';
 
 /**
  * Wraps a feature page. If the module is flagged "under development" by the
