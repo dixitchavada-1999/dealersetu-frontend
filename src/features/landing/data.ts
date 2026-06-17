@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 
 export const COLORS = {
-  bg: '#0f172a',
+  bg: '#13284d',
   primary: '#0F52BA',
   primaryDark: '#0A3D8F',
   secondary: '#00C9A7',
