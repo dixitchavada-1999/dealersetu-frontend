@@ -51,8 +51,8 @@ export default function RegisterPage() {
       tagline="Start growing your B2B business"
       description="Create your account in seconds and get instant access to products, orders, dispatch, marketing — everything in one platform."
     >
-      <h2 className="text-2xl font-bold text-white mb-1">Create account</h2>
-      <p className="text-slate-400 mb-6 text-sm">Register your admin account to get started</p>
+      <h2 className="text-2xl font-bold text-slate-900 mb-1">Create account</h2>
+      <p className="text-slate-600 mb-6 text-sm">Register your admin account to get started</p>
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-2 gap-4">
@@ -68,9 +68,9 @@ export default function RegisterPage() {
         </div>
       </form>
 
-      <p className="mt-6 text-center text-sm text-slate-400">
+      <p className="mt-6 text-center text-sm text-slate-600">
         Already have an account?{' '}
-        <Link to="/login" className="text-[#00C9A7] hover:text-[#14b8a6] font-semibold transition-colors">Sign in</Link>
+        <Link to="/login" className="text-[#0F52BA] hover:text-[#0A3D8F] font-semibold transition-colors">Sign in</Link>
       </p>
     </AuthLayout>
   );

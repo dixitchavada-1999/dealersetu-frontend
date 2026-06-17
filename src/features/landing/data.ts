@@ -4,11 +4,11 @@ import {
 } from 'lucide-react';
 
 export const COLORS = {
-  bg: '#13284d',
+  bg: '#f8fafc',
   primary: '#0F52BA',
   primaryDark: '#0A3D8F',
-  secondary: '#00C9A7',
-  gradient: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)',
+  secondary: '#3B82F6',
+  gradient: 'linear-gradient(135deg, #0F52BA 0%, #3B82F6 100%)',
 };
 
 export const features = [
@@ -87,6 +87,6 @@ export const navLinks = [
 ];
 
 /** Reusable section eyebrow pill (teal or blue accent). */
-export const PILL_TEAL = { backgroundColor: 'rgba(0, 201, 167, 0.08)', borderColor: 'rgba(0, 201, 167, 0.2)', color: '#00C9A7' };
+export const PILL_TEAL = { backgroundColor: 'rgba(15, 82, 186, 0.08)', borderColor: 'rgba(15, 82, 186, 0.2)', color: '#0F52BA' };
 export const PILL_BLUE = { backgroundColor: 'rgba(15, 82, 186, 0.08)', borderColor: 'rgba(15, 82, 186, 0.2)', color: '#0F52BA' };
-export const GRADIENT_TEXT = { background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' } as const;
+export const GRADIENT_TEXT = { background: 'linear-gradient(135deg, #0F52BA 0%, #3B82F6 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' } as const;

@@ -1,4 +1,3 @@
-import ParticleBackground from '../../components/ParticleBackground';
 import ScrollToTop from '../../components/ScrollToTop';
 import { COLORS } from './data';
 import Navbar from './components/Navbar';
@@ -16,8 +15,7 @@ import Footer from './components/Footer';
 /** Marketing landing page — composed of self-contained sections. */
 export default function LandingPage() {
   return (
-    <div className="landing-scope min-h-screen text-white scroll-smooth overflow-x-hidden relative" style={{ backgroundColor: COLORS.bg }}>
-      <ParticleBackground />
+    <div className="landing-scope min-h-screen text-slate-900 scroll-smooth overflow-x-hidden relative" style={{ backgroundColor: COLORS.bg }}>
       <div className="landing-orbs">
         <div className="landing-orb landing-orb-1" />
         <div className="landing-orb landing-orb-2" />

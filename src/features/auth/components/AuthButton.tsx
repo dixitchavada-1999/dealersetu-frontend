@@ -7,7 +7,7 @@ type AuthButtonProps = {
   children: ReactNode;
 };
 
-const GRADIENT = { background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)', boxShadow: '0 10px 30px rgba(0, 201, 167, 0.3)' };
+const GRADIENT = { background: 'linear-gradient(135deg, #0F52BA 0%, #3B82F6 100%)', boxShadow: '0 10px 30px rgba(15, 82, 186, 0.3)' };
 
 /** Gradient call-to-action button used across the auth screens. */
 export default function AuthButton({ loading, type = 'submit', onClick, children }: AuthButtonProps) {

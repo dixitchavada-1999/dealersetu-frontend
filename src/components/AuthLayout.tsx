@@ -20,11 +20,11 @@ export default function AuthLayout({
 
   return (
     <div
-      className="landing-scope min-h-screen text-white relative overflow-hidden"
-      style={{ backgroundColor: '#0f172a' }}
+      className="landing-scope min-h-screen text-slate-900 relative overflow-hidden"
+      style={{ backgroundColor: '#f8fafc' }}
     >
       {/* Background (behind everything) */}
-      <ParticleBackground />
+      <ParticleBackground light />
       <div className="landing-orbs">
         <div className="landing-orb landing-orb-1" />
         <div className="landing-orb landing-orb-2" />
@@ -38,7 +38,7 @@ export default function AuthLayout({
       >
         {/* Left: Branding (desktop only) */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12">
-          <Link to="/" className="flex items-center gap-3 font-bold text-2xl text-white">
+          <Link to="/" className="flex items-center gap-3 font-bold text-2xl text-slate-900">
             <span
               className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg"
               style={{
@@ -68,7 +68,7 @@ export default function AuthLayout({
               {restWords}{' '}
               <span
                 style={{
-                  background: 'linear-gradient(135deg, #0F52BA, #00C9A7)',
+                  background: 'linear-gradient(135deg, #0F52BA, #3B82F6)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
@@ -77,7 +77,7 @@ export default function AuthLayout({
                 {lastWord}
               </span>
             </h1>
-            <p className="mt-6 text-base leading-relaxed max-w-md" style={{ color: '#94a3b8' }}>
+            <p className="mt-6 text-base leading-relaxed max-w-md" style={{ color: '#475569' }}>
               {description}
             </p>
           </div>
@@ -90,9 +90,9 @@ export default function AuthLayout({
         {/* Mobile brand bar */}
         <div
           className="lg:hidden flex items-center justify-center py-6 border-b"
-          style={{ borderColor: 'rgba(255,255,255,0.08)' }}
+          style={{ borderColor: 'rgba(15,23,42,0.08)' }}
         >
-          <Link to="/" className="flex items-center gap-2.5 font-bold text-xl text-white">
+          <Link to="/" className="flex items-center gap-2.5 font-bold text-xl text-slate-900">
             <span
               className="w-9 h-9 rounded-xl flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)' }}
@@ -119,10 +119,10 @@ export default function AuthLayout({
         <div
           className="flex-1 flex items-center justify-center p-6 sm:p-10"
           style={{
-            backgroundColor: 'rgba(10, 16, 32, 0.75)',
+            backgroundColor: 'rgba(255, 255, 255, 0.75)',
             backdropFilter: 'blur(12px)',
             WebkitBackdropFilter: 'blur(12px)',
-            borderLeft: '1px solid rgba(255, 255, 255, 0.05)',
+            borderLeft: '1px solid rgba(15, 23, 42, 0.08)',
           }}
         >
           <div className="w-full max-w-md">{children}</div>

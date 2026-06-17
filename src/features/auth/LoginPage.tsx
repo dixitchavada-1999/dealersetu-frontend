@@ -37,16 +37,16 @@ export default function LoginPage() {
         : 'Browse products, place orders, and track deliveries all from one convenient portal.'}
     >
       {/* Login Mode Tabs */}
-      <div className="flex bg-white/5 border border-white/10 rounded-xl p-1 mb-8">
+      <div className="flex bg-slate-100 border border-slate-200 rounded-xl p-1 mb-8">
         <button
           onClick={() => selectMode('admin')}
-          className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${mode === 'admin' ? 'bg-card text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+          className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${mode === 'admin' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
         >
           Admin Login
         </button>
         <button
           onClick={() => selectMode('customer')}
-          className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${mode === 'customer' ? 'bg-card text-white shadow-sm' : 'text-slate-400 hover:text-slate-200'}`}
+          className={`flex-1 py-2.5 text-sm font-semibold rounded-lg transition-all ${mode === 'customer' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
         >
           Customer Login
         </button>
@@ -71,9 +71,9 @@ export default function LoginPage() {
           {customerView === 'forgot' && <ResetPasswordFlow reset={reset} allowPhone onBack={exitCustomerForgot} />}
 
           {customerView !== 'forgot' && (
-            <p className="mt-8 text-center text-sm text-slate-400">
+            <p className="mt-8 text-center text-sm text-slate-600">
               Are you an admin?{' '}
-              <button onClick={() => selectMode('admin')} className="text-[#00C9A7] hover:text-[#14b8a6] font-semibold transition-colors">Sign in here</button>
+              <button onClick={() => selectMode('admin')} className="text-[#0F52BA] hover:text-[#0A3D8F] font-semibold transition-colors">Sign in here</button>
             </p>
           )}
         </>

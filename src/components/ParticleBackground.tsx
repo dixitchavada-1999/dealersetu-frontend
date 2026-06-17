@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-export default function ParticleBackground() {
+export default function ParticleBackground({ light = false }: { light?: boolean } = {}) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   useEffect(() => {
@@ -64,7 +64,9 @@ export default function ParticleBackground() {
       }
 
       draw() {
-        ctx!.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+        ctx!.fillStyle = light
+          ? `rgba(71, 85, 105, ${this.opacity})`
+          : `rgba(255, 255, 255, ${this.opacity})`;
         ctx!.beginPath();
         ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx!.fill();
@@ -81,7 +83,9 @@ export default function ParticleBackground() {
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
           if (dist < 130) {
-            ctx.strokeStyle = `rgba(255, 255, 255, ${0.05 * (1 - dist / 130)})`;
+            ctx.strokeStyle = light
+              ? `rgba(71, 85, 105, ${0.05 * (1 - dist / 130)})`
+              : `rgba(255, 255, 255, ${0.05 * (1 - dist / 130)})`;
             ctx.lineWidth = 0.5;
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -119,7 +123,7 @@ export default function ParticleBackground() {
         height: '100%',
         zIndex: 0,
         pointerEvents: 'none',
-        background: '#0f172a',
+        background: light ? 'transparent' : '#0f172a',
       }}
     />
   );

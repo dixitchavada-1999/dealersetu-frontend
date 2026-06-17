@@ -12,8 +12,8 @@ type Props = {
 export default function CustomerActivate({ form, onBack }: Props) {
   return (
     <>
-      <h2 className="text-2xl font-bold text-white mb-1">Activate Account</h2>
-      <p className="text-slate-400 mb-6">Enter the code from your admin and set your password</p>
+      <h2 className="text-2xl font-bold text-slate-900 mb-1">Activate Account</h2>
+      <p className="text-slate-600 mb-6">Enter the code from your admin and set your password</p>
 
       <form onSubmit={form.submitActivate} className="space-y-5">
         <AuthField
@@ -35,7 +35,7 @@ export default function CustomerActivate({ form, onBack }: Props) {
 
       <p className="mt-4 text-center text-sm">
         Already have a password?{' '}
-        <button onClick={onBack} className="text-[#00C9A7] hover:text-[#14b8a6] font-semibold transition-colors">Sign In</button>
+        <button onClick={onBack} className="text-[#0F52BA] hover:text-[#0A3D8F] font-semibold transition-colors">Sign In</button>
       </p>
     </>
   );

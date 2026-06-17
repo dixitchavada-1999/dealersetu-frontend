@@ -13,8 +13,8 @@ type Props = {
 export default function CustomerLogin({ form, onForgot, onActivate }: Props) {
   return (
     <>
-      <h2 className="text-2xl font-bold text-white mb-1">Customer Portal</h2>
-      <p className="text-slate-400 mb-6">Sign in with your phone number or email</p>
+      <h2 className="text-2xl font-bold text-slate-900 mb-1">Customer Portal</h2>
+      <p className="text-slate-600 mb-6">Sign in with your phone number or email</p>
 
       <form onSubmit={e => form.submitCustomer(e, onActivate)} className="space-y-5">
         <AuthField label="Phone Number or Email" icon={User} type="text" value={form.customerIdentifier} onChange={e => form.setCustomerIdentifier(e.target.value)} placeholder="9876543210 or email@example.com" autoComplete="username" />
@@ -23,12 +23,12 @@ export default function CustomerLogin({ form, onForgot, onActivate }: Props) {
       </form>
 
       <p className="mt-4 text-center text-sm">
-        <button onClick={onForgot} className="text-[#00C9A7] hover:text-[#14b8a6] font-semibold transition-colors">Forgot Password?</button>
+        <button onClick={onForgot} className="text-[#0F52BA] hover:text-[#0A3D8F] font-semibold transition-colors">Forgot Password?</button>
       </p>
 
-      <div className="mt-6 pt-6 border-t border-white/10 text-center">
-        <p className="text-sm text-slate-400 mb-2">First time here?</p>
-        <button onClick={onActivate} className="inline-flex items-center gap-2 px-5 py-2 bg-slate-100 hover:bg-slate-200 rounded-xl text-sm font-semibold text-slate-700 transition-colors">
+      <div className="mt-6 pt-6 border-t border-slate-200 text-center">
+        <p className="text-sm text-slate-600 mb-2">First time here?</p>
+        <button onClick={onActivate} className="inline-flex items-center gap-2 px-5 py-2 bg-slate-100 border border-slate-200 hover:bg-slate-200 rounded-xl text-sm font-semibold text-slate-700 transition-colors">
           <KeyRound size={16} /> Activate Your Account
         </button>
       </div>

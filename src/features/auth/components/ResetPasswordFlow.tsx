@@ -14,8 +14,8 @@ type Props = {
 export default function ResetPasswordFlow({ reset, allowPhone, onBack }: Props) {
   return (
     <>
-      <h2 className="text-2xl font-bold text-white mb-1">Reset Password</h2>
-      <p className="text-slate-400 mb-8">
+      <h2 className="text-2xl font-bold text-slate-900 mb-1">Reset Password</h2>
+      <p className="text-slate-600 mb-8">
         {reset.step === 'email' && (allowPhone ? 'Enter your email or phone number' : 'Enter your email to receive a reset OTP')}
         {reset.step === 'otp' && 'Enter the OTP sent to your email and your new password'}
         {reset.step === 'done' && 'Your password has been reset successfully'}
@@ -64,14 +64,14 @@ export default function ResetPasswordFlow({ reset, allowPhone, onBack }: Props) 
       {reset.step === 'done' && (
         <div className="text-center">
           <CheckCircle size={48} className="text-emerald-500 mx-auto mb-4" />
-          <p className="text-slate-300 mb-6">Password has been reset. You can now log in with your new password.</p>
+          <p className="text-slate-600 mb-6">Password has been reset. You can now log in with your new password.</p>
           <AuthButton type="button" onClick={onBack}>Back to Login</AuthButton>
         </div>
       )}
 
       {reset.step !== 'done' && (
         <p className="mt-4 text-center text-sm">
-          <button onClick={onBack} className="text-[#00C9A7] hover:text-[#14b8a6] font-semibold transition-colors">Back to Login</button>
+          <button onClick={onBack} className="text-[#0F52BA] hover:text-[#0A3D8F] font-semibold transition-colors">Back to Login</button>
         </p>
       )}
     </>
