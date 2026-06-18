@@ -12,6 +12,7 @@ export function usePasswordReset() {
   const [identifier, setIdentifier] = useState('');
   const [otp, setOtp] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
   const reset = () => {
@@ -19,6 +20,7 @@ export function usePasswordReset() {
     setIdentifier('');
     setOtp('');
     setPassword('');
+    setConfirmPassword('');
   };
 
   const submitEmail = async (e: FormEvent) => {
@@ -40,6 +42,7 @@ export function usePasswordReset() {
     e.preventDefault();
     if (!otp || !password) return toast.error('Please fill in all fields');
     if (password.length < 6) return toast.error('Password must be at least 6 characters');
+    if (password !== confirmPassword) return toast.error('Passwords do not match');
     setLoading(true);
     try {
       await authApi.resetPassword(identifier, otp, password);
@@ -54,6 +57,7 @@ export function usePasswordReset() {
 
   return {
     step, identifier, setIdentifier, otp, setOtp, password, setPassword,
+    confirmPassword, setConfirmPassword,
     loading, reset, submitEmail, submitReset,
   };
 }

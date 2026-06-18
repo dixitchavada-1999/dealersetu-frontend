@@ -57,6 +57,14 @@ export default function ResetPasswordFlow({ reset, allowPhone, onBack }: Props) 
             onChange={e => reset.setPassword(e.target.value)}
             placeholder="Min. 6 characters"
           />
+          <AuthField
+            label="Confirm Password"
+            icon={Lock}
+            type="password"
+            value={reset.confirmPassword}
+            onChange={e => reset.setConfirmPassword(e.target.value)}
+            placeholder="Re-enter new password"
+          />
           <AuthButton loading={reset.loading}>Reset Password <RotateCcw size={18} /></AuthButton>
         </form>
       )}
