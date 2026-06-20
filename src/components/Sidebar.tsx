@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import {
-  LayoutDashboard, FolderTree, Package, ShoppingCart, Users, Truck, Settings, X, ShoppingBag, Building2, Wrench, Megaphone, MessageSquare, Bell, Activity, ImageIcon, ShieldCheck, Construction,
+  LayoutDashboard, FolderTree, Package, ShoppingCart, Users, Truck, Settings, X, ShoppingBag, Building2, Wrench, Megaphone, MessageSquare, Bell, Activity, ImageIcon, ShieldCheck, Construction, Mail,
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useModules } from '../contexts/ModulesContext';
@@ -53,6 +53,7 @@ const superAdminItems: MenuItem[] = [
   { to: '/super-admin/tenants',        icon: Building2, label: 'Tenants',        permission: 'tenants.read',      superAdminOnly: true },
   { to: '/super-admin/activity-logs',  icon: Activity,  label: 'Activity Logs',  permission: 'activitylogs.read', superAdminOnly: true },
   { to: '/super-admin/module-status',  icon: Construction, label: 'Module Status', superAdminOnly: true },
+  { to: '/super-admin/email-templates', icon: Mail, label: 'Email Templates', superAdminOnly: true },
   { to: '/roles',                      icon: ShieldCheck, label: 'Modules',        permission: 'systemroles.read',  superAdminOnly: true },
 ];
 

@@ -10,15 +10,15 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto">
           <Eyebrow label="Pricing" style={{ ...PILL_BLUE, color: '#0F52BA' }} />
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900">Simple, transparent pricing</h2>
-          <p className="mt-6 text-lg" style={{ color: '#475569' }}>Choose a plan that grows with you.</p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900">Simple, transparent pricing</h2>
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg" style={{ color: '#475569' }}>Choose a plan that grows with you.</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6 max-w-5xl mx-auto">
           {plans.map(p => (
             <div key={p.name} className="relative">
               {p.highlighted && <div className="absolute -inset-px rounded-3xl blur opacity-60" style={{ background: 'linear-gradient(135deg, #0F52BA, #3B82F6)' }} />}
-              <div className="relative p-8 rounded-3xl border h-full shadow-sm" style={{ backgroundColor: '#ffffff', borderColor: p.highlighted ? '#cbd5e1' : '#e2e8f0' }}>
+              <div className="relative p-6 sm:p-8 rounded-3xl border h-full shadow-sm" style={{ backgroundColor: '#ffffff', borderColor: p.highlighted ? '#cbd5e1' : '#e2e8f0' }}>
                 {p.highlighted && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-white text-xs font-semibold px-4 py-1 rounded-full" style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #3B82F6 100%)', boxShadow: '0 8px 20px rgba(15, 82, 186, 0.4)' }}>
                     ⭐ Most Popular
@@ -27,7 +27,7 @@ export default function Pricing() {
                 <h3 className="text-xl font-bold text-slate-900">{p.name}</h3>
                 <p className="mt-1 text-sm" style={{ color: '#475569' }}>{p.desc}</p>
                 <div className="mt-6 flex items-baseline gap-1">
-                  <span className="text-5xl font-bold" style={p.highlighted ? GRADIENT_TEXT : { color: '#0f172a' }}>{p.price}</span>
+                  <span className="text-4xl sm:text-5xl font-bold" style={p.highlighted ? GRADIENT_TEXT : { color: '#0f172a' }}>{p.price}</span>
                   <span style={{ color: '#64748b' }}>{p.period}</span>
                 </div>
                 <Link

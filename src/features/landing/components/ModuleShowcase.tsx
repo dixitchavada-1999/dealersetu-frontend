@@ -13,8 +13,8 @@ export default function ModuleShowcase() {
   }, [isHovered]);
 
   return (
-    <div id="modules" className="mt-12 relative max-w-6xl mx-auto">
-      <div className="flex flex-wrap justify-center gap-2 mb-10">
+    <div id="modules" className="mt-10 sm:mt-12 relative max-w-6xl mx-auto">
+      <div className="flex flex-wrap justify-center gap-2 mb-8 sm:mb-10">
         {modules.map((m, i) => {
           const isActive = activeModule === i;
           return (
@@ -37,8 +37,8 @@ export default function ModuleShowcase() {
       </div>
 
       <div key={`text-${activeModule}`} className="text-center max-w-2xl mx-auto mb-6" style={{ animation: 'fadeIn 0.4s ease', minHeight: '90px' }}>
-        <h3 className="text-2xl sm:text-3xl font-bold text-slate-900">{modules[activeModule].title}</h3>
-        <p className="mt-3 text-base leading-relaxed" style={{ color: '#475569' }}>{modules[activeModule].desc}</p>
+        <h3 className="text-xl sm:text-3xl font-bold text-slate-900">{modules[activeModule].title}</h3>
+        <p className="mt-3 text-sm sm:text-base leading-relaxed" style={{ color: '#475569' }}>{modules[activeModule].desc}</p>
       </div>
 
       <div className="max-w-xs mx-auto mb-8 h-0.5 rounded-full overflow-hidden" style={{ background: 'rgba(15, 23, 42, 0.08)' }}>

@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
-import ParticleBackground from './ParticleBackground';
 
 type Props = {
   children: ReactNode;
@@ -24,7 +23,6 @@ export default function AuthLayout({
       style={{ backgroundColor: '#f8fafc' }}
     >
       {/* Background (behind everything) */}
-      <ParticleBackground light />
       <div className="landing-orbs">
         <div className="landing-orb landing-orb-1" />
         <div className="landing-orb landing-orb-2" />

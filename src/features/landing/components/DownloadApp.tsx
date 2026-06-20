@@ -10,23 +10,23 @@ export default function DownloadApp() {
       <div className="absolute inset-0 -z-10" style={{ background: 'radial-gradient(ellipse at top right, rgba(15, 82, 186, 0.2), transparent 60%)' }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 items-center">
           <div>
             <Eyebrow label="Mobile App" style={PILL_TEAL} />
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
               Take DealerSetu <br />
               <span style={GRADIENT_TEXT}>everywhere.</span>
             </h2>
-            <p className="mt-6 text-lg max-w-lg" style={{ color: '#cbd5e1' }}>
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg max-w-lg" style={{ color: '#cbd5e1' }}>
               Manage your business from your phone. Approve orders, check dispatch, and track marketing — all from the app.
             </p>
 
-            <div className="mt-10 flex flex-col sm:flex-row gap-4">
-              <a href="#" className="flex items-center gap-3 text-white px-6 py-3.5 rounded-xl transition shadow-xl" style={{ backgroundColor: '#000' }}>
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4">
+              <a href="#" className="flex items-center justify-center sm:justify-start gap-3 text-white px-6 py-3.5 rounded-xl transition shadow-xl" style={{ backgroundColor: '#000' }}>
                 <Apple size={28} />
                 <div className="text-left"><div className="text-xs" style={{ color: '#94a3b8' }}>Download on the</div><div className="font-semibold">App Store</div></div>
               </a>
-              <a href="#" className="flex items-center gap-3 text-white px-6 py-3.5 rounded-xl transition shadow-xl" style={{ backgroundColor: '#000' }}>
+              <a href="#" className="flex items-center justify-center sm:justify-start gap-3 text-white px-6 py-3.5 rounded-xl transition shadow-xl" style={{ backgroundColor: '#000' }}>
                 <Smartphone size={28} />
                 <div className="text-left"><div className="text-xs" style={{ color: '#94a3b8' }}>Get it on</div><div className="font-semibold">Google Play</div></div>
               </a>

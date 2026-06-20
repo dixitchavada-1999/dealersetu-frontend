@@ -14,8 +14,8 @@ const COLUMNS = [
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200" style={{ backgroundColor: '#ffffff' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style={{ color: '#475569' }}>
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16" style={{ color: '#475569' }}>
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-6 sm:gap-8">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-3 font-bold text-xl text-slate-900">
               <span className="w-11 h-11 rounded-xl flex items-center justify-center text-white" style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)' }}><ShoppingBag size={20} /></span>
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
           ))}
         </div>
-        <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-10 sm:mt-12 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm">© 2026 DealerSetu. All rights reserved.</p>
           <p className="text-sm">Made with <span style={{ color: '#0F52BA' }}>♥</span> in India</p>
         </div>

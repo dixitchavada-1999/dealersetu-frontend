@@ -1018,5 +1018,43 @@ export const cartApi = {
   },
 };
 
+// ── Email Templates API (super-admin) ─────────────────────────
+
+export type EmailTemplate = {
+  _id?: string;
+  key: string;
+  name: string;
+  description?: string;
+  subject: string;
+  heading?: string;
+  bodyTop?: string;
+  highlightKey?: string;
+  bodyBottom?: string;
+  footerText?: string;
+  brandColor?: string;
+  logoUrl?: string;
+  placeholders?: string[];
+  isActive?: boolean;
+};
+
+export type EmailVariable = { _id?: string; key: string; value: string; description?: string };
+
+export const emailTemplatesApi = {
+  getAll: () => get<EmailTemplate[]>('/super-admin/email-templates', { force: true }),
+  getOne: (key: string) => get<EmailTemplate>(`/super-admin/email-templates/${key}`, { force: true }),
+  create: (data: Partial<EmailTemplate>) => post<EmailTemplate>('/super-admin/email-templates', data),
+  update: (key: string, data: Partial<EmailTemplate>) =>
+    put<EmailTemplate>(`/super-admin/email-templates/${key}`, data),
+  remove: (key: string) => del<{ message: string }>(`/super-admin/email-templates/${key}`),
+  reset: (key: string) => post<EmailTemplate>(`/super-admin/email-templates/reset/${key}`),
+  preview: (template: Partial<EmailTemplate>) =>
+    post<{ subject: string; html: string }>('/super-admin/email-templates/preview', template),
+  // Global custom variables
+  getVariables: () => get<EmailVariable[]>('/super-admin/email-templates/variables', { force: true }),
+  saveVariable: (data: { key: string; value: string; description?: string }) =>
+    post<EmailVariable>('/super-admin/email-templates/variables', data),
+  deleteVariable: (key: string) => del<{ message: string }>(`/super-admin/email-templates/variables/${key}`),
+};
+
 export { extractError };
 export default api;
