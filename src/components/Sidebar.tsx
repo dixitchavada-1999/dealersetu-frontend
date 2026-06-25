@@ -54,6 +54,7 @@ const superAdminItems: MenuItem[] = [
   { to: '/super-admin/activity-logs',  icon: Activity,  label: 'Activity Logs',  permission: 'activitylogs.read', superAdminOnly: true },
   { to: '/super-admin/module-status',  icon: Construction, label: 'Module Status', superAdminOnly: true },
   { to: '/super-admin/email-templates', icon: Mail, label: 'Email Templates', superAdminOnly: true },
+  { to: '/super-admin/settings', icon: Settings, label: 'Settings', superAdminOnly: true },
   { to: '/roles',                      icon: ShieldCheck, label: 'Modules',        permission: 'systemroles.read',  superAdminOnly: true },
 ];
 
@@ -140,7 +141,7 @@ export default function Sidebar({ open, onClose }: Props) {
             </div>
             <div className="min-w-0">
               <p className="text-sm font-medium text-slate-900 truncate">{user?.firstName} {user?.lastName}</p>
-              <p className="text-xs text-slate-500 truncate">{roleLabel}</p>
+              <p className="text-xs text-slate-600 truncate">{roleLabel}</p>
             </div>
           </div>
         </div>

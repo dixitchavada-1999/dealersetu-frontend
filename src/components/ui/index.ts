@@ -11,6 +11,8 @@ export { default as ImageUploader } from './ImageUploader';
 export { default as ProgressBar } from './ProgressBar';
 export { default as SegmentedBar } from './SegmentedBar';
 export { default as Sparkline } from './Sparkline';
+export { default as DonutChart } from './DonutChart';
+export type { DonutSegment } from './DonutChart';
 export { default as DataTable } from './DataTable';
 export type { Column } from './DataTable';
 export { default as FormField, TextInput, TextArea } from './FormField';

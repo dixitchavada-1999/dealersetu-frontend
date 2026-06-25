@@ -2,7 +2,6 @@ import { IndianRupee, Wallet, Clock, TrendingUp, CheckCircle, PackageCheck } fro
 import type { LucideIcon } from 'lucide-react';
 import type { DashboardStats } from '../../../lib/types';
 import { formatCurrency } from '../../../lib/format';
-import Card from '../../../components/ui/Card';
 
 type Props = { revenue: DashboardStats['revenue'] };
 
@@ -27,16 +26,19 @@ export default function RevenueBreakdown({ revenue }: Props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
       {tiles.map((t) => (
-        <Card key={t.label} hover className={t.border}>
+        <div
+          key={t.label}
+          className={`bg-card rounded-2xl border ${t.border} shadow-sm p-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200`}
+        >
           <div className="flex items-center justify-between mb-3">
-            <div className={`w-10 h-10 ${t.iconWrap} rounded-xl flex items-center justify-center`}>
+            <div className={`w-11 h-11 ${t.iconWrap} rounded-xl flex items-center justify-center`}>
               <t.icon size={20} className={t.iconColor} strokeWidth={1.8} />
             </div>
             <t.cornerIcon size={16} className={t.cornerColor} />
           </div>
-          <p className="text-2xl font-bold text-slate-900">{formatCurrency(t.value)}</p>
+          <p className="text-2xl font-bold text-slate-900 tracking-tight">{formatCurrency(t.value)}</p>
           <p className="text-sm text-slate-500 mt-0.5">{t.label}</p>
-        </Card>
+        </div>
       ))}
     </div>
   );

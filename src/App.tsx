@@ -39,6 +39,7 @@ const Roles = lazy(() => import('./pages/Roles'));
 const RoleEdit = lazy(() => import('./pages/RoleEdit'));
 const ModuleStatusPage = lazy(() => import('./pages/ModuleStatus'));
 const EmailTemplatesPage = lazy(() => import('./pages/EmailTemplates'));
+const PlatformSettingsPage = lazy(() => import('./pages/PlatformSettings'));
 
 function PageLoader() {
   return <div className="flex justify-center items-center py-20"><Loader2 className="animate-spin text-primary-600" size={28} /></div>;
@@ -121,6 +122,7 @@ function AppInner() {
                 <Route path="/super-admin/activity-logs" element={<Suspense fallback={<PageLoader />}><ActivityLogs /></Suspense>} />
                 <Route path="/super-admin/module-status" element={<Suspense fallback={<PageLoader />}><ModuleStatusPage /></Suspense>} />
                 <Route path="/super-admin/email-templates" element={<Suspense fallback={<PageLoader />}><EmailTemplatesPage /></Suspense>} />
+                <Route path="/super-admin/settings" element={<Suspense fallback={<PageLoader />}><PlatformSettingsPage /></Suspense>} />
               </Route>
             </Route>
 

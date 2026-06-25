@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag } from 'lucide-react';
+import BrandLogo from './BrandLogo';
 
 type Props = {
   children: ReactNode;
@@ -37,6 +38,8 @@ export default function AuthLayout({
         {/* Left: Branding (desktop only) */}
         <div className="hidden lg:flex lg:w-1/2 flex-col justify-between p-12">
           <Link to="/" className="flex items-center gap-3 font-bold text-2xl text-slate-900">
+            <BrandLogo imgClassName="h-11 w-auto" fallback={
+            <>
             <span
               className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg"
               style={{
@@ -59,6 +62,8 @@ export default function AuthLayout({
                 Setu
               </span>
             </span>
+            </>
+            } />
           </Link>
 
           <div>
@@ -91,6 +96,8 @@ export default function AuthLayout({
           style={{ borderColor: 'rgba(15,23,42,0.08)' }}
         >
           <Link to="/" className="flex items-center gap-2.5 font-bold text-xl text-slate-900">
+            <BrandLogo imgClassName="h-9 w-auto" fallback={
+            <>
             <span
               className="w-9 h-9 rounded-xl flex items-center justify-center"
               style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)' }}
@@ -110,6 +117,8 @@ export default function AuthLayout({
                 Setu
               </span>
             </span>
+            </>
+            } />
           </Link>
         </div>
 

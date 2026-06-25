@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { navLinks } from '../data';
+import BrandLogo from '../../../components/BrandLogo';
 
 const HEADER_GRADIENT = 'linear-gradient(135deg, #0A2A6B 0%, #0F52BA 100%)';
 
@@ -14,10 +15,14 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur-xl border-b border-white/10" style={{ background: HEADER_GRADIENT, boxShadow: '0 4px 24px rgba(10, 42, 107, 0.28)' }}>
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 font-bold text-2xl text-white">
-          <span className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)', boxShadow: '0 8px 24px rgba(0, 201, 167, 0.3)' }}>
-            <ShoppingBag size={22} className="text-white" />
-          </span>
-          <span>DealerSetu</span>
+          <BrandLogo variant="dark" imgClassName="h-11 w-auto" fallback={
+            <>
+              <span className="w-11 h-11 rounded-xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #0F52BA 0%, #00C9A7 100%)', boxShadow: '0 8px 24px rgba(0, 201, 167, 0.3)' }}>
+                <ShoppingBag size={22} className="text-white" />
+              </span>
+              <span>DealerSetu</span>
+            </>
+          } />
         </Link>
 
         <div className="hidden lg:flex items-center gap-10">

@@ -1,0 +1,992 @@
+{
+  "ranAt": "2026-06-21T08:39:33.373Z",
+  "base": "http://localhost:5174",
+  "owner": {
+    "firstName": "QA",
+    "lastName": "Resp",
+    "email": "qa.resp.020337@example.com",
+    "userName": "qaresp020337",
+    "password": "Test@1234",
+    "mobileNumber": "960203371",
+    "businessName": "QA Resp Co 020337"
+  },
+  "totalChecks": 66,
+  "overflows": 0,
+  "findings": [
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/dashboard__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/dashboard__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/dashboard__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/dashboard__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/dashboard__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "dashboard",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/dashboard__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/products__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/products-form__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/products__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/products-form__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/products__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/products__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/products__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/products-form__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/products__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "products",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/products-form__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/categories__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/categories-form__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/categories__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/categories-form__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/categories__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/categories__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/categories__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/categories-form__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/categories__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "categories",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/categories-form__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/orders__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/orders__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/orders__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/orders__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/orders__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "orders",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/orders__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/customers__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/customers-form__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/customers__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/customers-form__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/customers__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/customers__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/customers__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/customers-form__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/customers__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "customers",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/customers-form__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/settings__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/settings__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/settings__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/settings__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/settings__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "settings",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/settings__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/profile__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/profile__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/profile__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/profile__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/profile__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "profile",
+      "form": false,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/profile__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 0,
+      "lowContrast": []
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-register__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-register__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-register__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-register__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-register__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "register",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-register__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 1,
+      "lowContrast": [
+        {
+          "text": "Create Account",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-login__mobile__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "mobile",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-login__mobile__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "tablet",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-login__tablet__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "tablet",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-login__tablet__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "light",
+      "screenshot": "responsive-audit-out/auth-login__desktop__light.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    },
+    {
+      "route": "login",
+      "form": true,
+      "viewport": "desktop",
+      "theme": "dark",
+      "screenshot": "responsive-audit-out/auth-login__desktop__dark.png",
+      "overflowPx": 0,
+      "wideEls": [],
+      "lowContrastCount": 2,
+      "lowContrast": [
+        {
+          "text": "Sign In",
+          "ratio": 1,
+          "color": "rgb(255, 255, 255)",
+          "bg": "rgb(255,255,255)",
+          "fontSize": 16,
+          "required": 4.5
+        },
+        {
+          "text": "Customer Login",
+          "ratio": 4.34,
+          "color": "rgb(100, 116, 139)",
+          "bg": "rgb(241,245,249)",
+          "fontSize": 14,
+          "required": 4.5
+        }
+      ]
+    }
+  ],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)",
+    "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+  ]
+}

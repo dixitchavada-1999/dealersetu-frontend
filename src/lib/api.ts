@@ -1056,5 +1056,14 @@ export const emailTemplatesApi = {
   deleteVariable: (key: string) => del<{ message: string }>(`/super-admin/email-templates/variables/${key}`),
 };
 
+// ── Platform Settings API (super-admin branding) ──────────────
+
+export type PlatformSettings = { logoUrl: string; logoLightUrl: string; brandName: string; brandColor: string };
+
+export const platformSettingsApi = {
+  get: () => get<PlatformSettings>('/platform-settings', { force: true }),
+  update: (data: Partial<PlatformSettings>) => put<PlatformSettings>('/platform-settings', data),
+};
+
 export { extractError };
 export default api;

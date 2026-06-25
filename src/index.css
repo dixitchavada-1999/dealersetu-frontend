@@ -180,6 +180,14 @@
   --color-primary-700: #84ace4;
 }
 
+/* ── Dark mode: keep brand-primary readable as BOTH text and fills ──
+   Token inversion alone can't serve both roles: as link/icon TEXT, primary-600
+   stays too dark on dark surfaces; as a button-hover FILL, primary-700 inverts
+   too light for white text. Split the two concerns explicitly. (Unlayered so it
+   wins over Tailwind's utility layer.) */
+.dark .text-primary-600 { color: #84ace4; }                       /* links & icons → bright */
+.dark .hover\:bg-primary-700:hover { background-color: #0d459b; }  /* button hover → deep, white text passes */
+
 /* ── Base styles ──────────────────────────────────────────────── */
 @layer base {
   * {
