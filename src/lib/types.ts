@@ -321,11 +321,22 @@ export type UserMember = {
   loginCode: string;
   isDeviceLocked: boolean;
   deviceId: string;
+  deactivatedByCustomer?: boolean;
   linkedCustomerId?: string | null;
   role: string;
   isActive: boolean;
   createdAt?: string;
   updatedAt?: string;
+};
+
+export type MyBusiness = {
+  tenantId: string;
+  name: string;
+  businessType: string;
+  logo: string;
+  isCurrent: boolean;
+  productsHidden: boolean;
+  deactivated: boolean;
 };
 
 export type AuthTokens = {

@@ -5,7 +5,7 @@ import type {
   DashboardStats, UserMember, Tenant, DispatchMember, DispatchPermissions,
   ProductionMember, ProductionPermissions, MarketingMember, MarketingPermissions,
   CustomerBalances, User, Notification, NotificationPagination, Feedback, FeedbackType,
-  Banner,
+  Banner, MyBusiness,
 } from './types';
 import toast from './toast';
 
@@ -403,6 +403,7 @@ const mapUserMember = (m: any): UserMember => ({
   loginCode: m.loginCode || '',
   isDeviceLocked: m.isDeviceLocked || false,
   deviceId: m.deviceId || '',
+  deactivatedByCustomer: m.deactivatedByCustomer || false,
   linkedCustomerId: m.linkedCustomerId || null,
   role: m.role || 'USER',
   isActive: m.isActive ?? true,
@@ -526,6 +527,24 @@ export const authApi = {
   resetPassword: async (email: string, otp: string, newPassword: string) => {
     const { data } = await api.post('/auth/reset-password', { email, otp, newPassword });
     return data;
+  },
+
+  // ── Customer multi-owner (business) management ──
+  addBusiness: async (loginCode: string) => {
+    return post<{ availableTenants: any[] }>('/auth/add-business', { loginCode, deviceId: 'web-browser' });
+  },
+
+  getMyBusinesses: async (): Promise<MyBusiness[]> => {
+    const res = await get<MyBusiness[]>('/auth/my-businesses', { force: true });
+    return Array.isArray(res) ? res : [];
+  },
+
+  setBusinessVisibility: async (tenantId: string, hidden: boolean) => {
+    return put(`/auth/my-businesses/${tenantId}/visibility`, { hidden });
+  },
+
+  setBusinessDeactivated: async (tenantId: string, deactivated: boolean) => {
+    return put(`/auth/my-businesses/${tenantId}/deactivate`, { deactivated });
   },
 };
 
