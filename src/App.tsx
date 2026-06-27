@@ -16,6 +16,7 @@ import Landing from './pages/Landing';
 
 const Dashboard = lazy(() => import('./pages/Dashboard'));
 const MyProducts = lazy(() => import('./pages/MyProducts'));
+const MyBusinesses = lazy(() => import('./pages/MyBusinesses'));
 const Categories = lazy(() => import('./pages/Categories'));
 const Products = lazy(() => import('./pages/Products'));
 const ProductDetail = lazy(() => import('./pages/ProductDetail'));
@@ -64,6 +65,7 @@ function AppInner() {
                 <Route path="/dashboard" element={<Suspense fallback={<PageLoader />}><ModuleGate moduleKey="dashboard" label="Dashboard"><Dashboard /></ModuleGate></Suspense>} />
                 <Route path="/products" element={<Suspense fallback={<PageLoader />}><ModuleGate moduleKey="products" label="Products"><Products /></ModuleGate></Suspense>} />
                 <Route path="/my-products" element={<Suspense fallback={<PageLoader />}><MyProducts /></Suspense>} />
+                <Route path="/my-businesses" element={<Suspense fallback={<PageLoader />}><MyBusinesses /></Suspense>} />
                 <Route path="/products/:id" element={<Suspense fallback={<PageLoader />}><ModuleGate moduleKey="products" label="Products"><ProductDetail /></ModuleGate></Suspense>} />
                 <Route path="/orders" element={<Suspense fallback={<PageLoader />}><ModuleGate moduleKey="orders" label="Orders"><Orders /></ModuleGate></Suspense>} />
                 <Route path="/orders/:id" element={<Suspense fallback={<PageLoader />}><ModuleGate moduleKey="orders" label="Orders"><OrderDetail /></ModuleGate></Suspense>} />

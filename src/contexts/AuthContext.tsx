@@ -31,6 +31,7 @@ type AuthContextType = {
   /** Update the cached tenant.enabledRoles after the owner toggles a role (drives sidebar gating). */
   applyEnabledRoles: (roles: string[]) => void;
   switchTenant: (tenantId: string) => Promise<void>;
+  addBusiness: (loginCode: string) => Promise<void>;
   register: (data: {
     firstName: string; lastName: string; email: string;
     userName: string; password: string; mobileNumber: string;
@@ -142,6 +143,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  const addBusiness = useCallback(async (loginCode: string) => {
+    const res = await authApi.addBusiness(loginCode);
+    const tenants = res?.availableTenants;
+    if (tenants?.length) {
+      setAvailableTenants(tenants);
+      localStorage.setItem('availableTenants', JSON.stringify(tenants));
+    }
+  }, []);
+
   const register = useCallback(async (data: {
     firstName: string; lastName: string; email: string;
     userName: string; password: string; mobileNumber: string;
@@ -193,7 +203,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       hasAnyPermission: ctxHasAnyPermission,
       hasAllPermissions: ctxHasAllPermissions,
       availableTenants,
-      login, activateAccount, updateProfile, applyEnabledRoles, switchTenant, register, logout,
+      login, activateAccount, updateProfile, applyEnabledRoles, switchTenant, addBusiness, register, logout,
     }}>
       {children}
     </AuthContext.Provider>

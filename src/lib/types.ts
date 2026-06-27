@@ -424,7 +424,8 @@ export type NotificationType =
   | 'stock_updated'
   | 'feedback_received'
   | 'discount_updated'
-  | 'welcome';
+  | 'welcome'
+  | 'customer_deactivated';
 
 export type NotificationData = {
   orderId?: string;

@@ -30,6 +30,7 @@ const typeIcons: Record<string, string> = {
   feedback_received: '💬',
   discount_updated: '🏷️',
   welcome: '🎉',
+  customer_deactivated: '🚫',
 };
 
 function getNotificationRoute(notification: Notification): string {
@@ -37,7 +38,7 @@ function getNotificationRoute(notification: Notification): string {
   if (type.startsWith('order_') || type.startsWith('payment_')) {
     return data.orderId ? `/orders/${data.orderId}` : '/orders';
   }
-  if (type === 'new_customer') return '/customers';
+  if (type === 'new_customer' || type === 'customer_deactivated') return '/customers';
   if (type === 'low_stock' || type === 'new_product' || type === 'stock_updated' || type === 'discount_updated') return '/products';
   if (type === 'feedback_received') return '/feedback';
   return '/notifications';

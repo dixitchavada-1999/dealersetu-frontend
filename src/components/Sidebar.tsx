@@ -1,9 +1,11 @@
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import {
   LayoutDashboard, FolderTree, Package, ShoppingCart, Users, Truck, Settings, X, ShoppingBag, Building2, Wrench, Megaphone, MessageSquare, Bell, Activity, ImageIcon, ShieldCheck, Construction, Mail,
 } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { useModules } from '../contexts/ModulesContext';
+import { getCartCount } from '../features/cart/cartStorage';
 
 type MenuItem = {
   to: string;
@@ -44,6 +46,7 @@ const customerItems: MenuItem[] = [
   { to: '/products',      icon: Package,         label: 'Products',      permission: 'products.read',      module: 'products' },
   { to: '/my-products',   icon: ShoppingBag,     label: 'My Products',   permission: 'products.read' },
   { to: '/cart',          icon: ShoppingCart,    label: 'Cart',          permission: 'orders.create' },
+  { to: '/my-businesses', icon: Building2,       label: 'My Businesses' },
   { to: '/orders',        icon: ShoppingCart,    label: 'Orders',        permission: 'orders.read',        module: 'orders' },
   { to: '/notifications', icon: Bell,            label: 'Notifications', permission: 'notifications.read', module: 'notifications' },
   { to: '/feedback',      icon: MessageSquare,   label: 'Feedback',      permission: 'feedback.read',      module: 'feedback' },
@@ -63,6 +66,19 @@ type Props = { open: boolean; onClose: () => void };
 export default function Sidebar({ open, onClose }: Props) {
   const { isAdmin, isDispatch, isProduction, isMarketing, isSuperAdmin, isCustomer, user, hasPermission } = useAuth();
   const { moduleType } = useModules();
+
+  // Live cart count for the Cart menu badge — updates on add/remove/clear.
+  const [cartCount, setCartCount] = useState(() => getCartCount());
+  useEffect(() => {
+    const sync = () => setCartCount(getCartCount());
+    sync();
+    window.addEventListener('cart-updated', sync);
+    window.addEventListener('storage', sync);
+    return () => {
+      window.removeEventListener('cart-updated', sync);
+      window.removeEventListener('storage', sync);
+    };
+  }, []);
 
   // Pick the right menu pool, then filter by permission.
   let pool: MenuItem[];
@@ -155,8 +171,17 @@ export default function Sidebar({ open, onClose }: Props) {
         <nav className="flex-1 px-3 space-y-1 overflow-y-auto">
           {items.map(item => (
             <NavLink key={item.to} to={item.to} end={item.to === '/dashboard'} className={linkClass} onClick={onClose}>
-              <item.icon size={19} strokeWidth={1.8} />
-              {item.label}
+              {({ isActive }) => (
+                <>
+                  <item.icon size={19} strokeWidth={1.8} />
+                  {item.label}
+                  {item.to === '/cart' && cartCount > 0 && (
+                    <span className={`ml-auto min-w-[20px] h-5 px-1.5 inline-flex items-center justify-center rounded-full text-[11px] font-bold ${isActive ? 'bg-white text-primary-600' : 'bg-primary-600 text-white'}`}>
+                      {cartCount > 99 ? '99+' : cartCount}
+                    </span>
+                  )}
+                </>
+              )}
             </NavLink>
           ))}
         </nav>

@@ -8,9 +8,11 @@ type Props = {
   title?: string;
   message?: string;
   isLoading?: boolean;
+  confirmLabel?: string;
+  loadingLabel?: string;
 };
 
-export default function ConfirmDialog({ isOpen, onClose, onConfirm, title = 'Confirm Delete', message = 'Are you sure? This action cannot be undone.', isLoading }: Props) {
+export default function ConfirmDialog({ isOpen, onClose, onConfirm, title = 'Confirm Delete', message = 'Are you sure? This action cannot be undone.', isLoading, confirmLabel = 'Delete', loadingLabel = 'Deleting...' }: Props) {
   if (!isOpen) return null;
 
   return createPortal(
@@ -28,7 +30,7 @@ export default function ConfirmDialog({ isOpen, onClose, onConfirm, title = 'Con
               Cancel
             </button>
             <button onClick={onConfirm} disabled={isLoading} className="flex-1 px-4 py-2.5 bg-red-600 text-white rounded-xl hover:bg-red-700 disabled:opacity-50 font-medium text-sm transition-colors shadow-sm">
-              {isLoading ? 'Deleting...' : 'Delete'}
+              {isLoading ? loadingLabel : confirmLabel}
             </button>
           </div>
         </div>

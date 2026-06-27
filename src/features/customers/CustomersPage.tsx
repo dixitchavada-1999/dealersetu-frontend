@@ -95,6 +95,7 @@ export default function CustomersPage() {
             {m.isActive ? 'Active' : 'Inactive'}
           </span>
           {m.isDeviceLocked && <span className="inline-flex items-center px-2 py-1 rounded-lg bg-amber-50 text-xs font-medium text-amber-700">Locked</span>}
+          {m.deactivatedByCustomer && <span className="inline-flex items-center px-2 py-1 rounded-lg bg-red-50 text-xs font-medium text-red-700">Deactivated you</span>}
         </div>
       ),
     },
